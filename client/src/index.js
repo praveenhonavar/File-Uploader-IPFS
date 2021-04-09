@@ -1,37 +1,55 @@
+// import getWeb3 from "./getWeb3";
+import Web3 from "web3";
+
 import ipfs from "./ipfs";
+
 import HashStorageContract from "./contracts/HashStorage.json";
-import getWeb3 from "./getWeb3";
+
+var contract;
+var account;
+
 
 
 var bufferedFile;
+
 var chooseButton =document.getElementById('choose');
 var uploadButton =document.getElementById('upload');
 
+window.addEventListener("load",async () => {
+    if (window.ethereum) {
+      window.web3 = new Web3(window.ethereum)
+      await window.ethereum.enable()
+      console.log(window.web3.eth.getAccounts());
+      console.log('llllll');
+      account = await window.web3.eth.getAccounts();
+      console.log(account);
 
-window.addEventListener('load',async ()=>{
+      const networkId = await window.web3.eth.net.getId();
+      console.log(networkId);
 
-    try{
+      const deployedNetwork = HashStorageContract.networks[networkId];
 
-        const web3 =  await getWeb3();
-        
-        console.log('ppppp');
+      console.log(deployedNetwork);
 
-        console.log(web3);
-    
-        // const accounts =  web3.eth.getAccounts();
-    
-        // console.log(accounts);
+      contract = new window.web3.eth.Contract(
+        HashStorageContract.abi,
+        deployedNetwork && deployedNetwork.address,
+
+      );
+
+      console.log(contract);
+
+
     }
-   
-    catch(err){
-        console.log('nooooooooo');
+    else if (window.web3) {
+      window.web3 = new Web3(window.web3.currentProvider)
+      console.log('fefefefefeqf');
     }
+    else {
+        console.log('Non-Ethereum browser detected. You should consider trying MetaMask!');
+    }
+  })
 
-
-
-
-
-})
 
 chooseButton.addEventListener('change',(event)=>{
     event.preventDefault();
@@ -54,6 +72,8 @@ uploadButton.addEventListener('click',(event)=>{
     event.preventDefault();
     console.log(bufferedFile);
 
+    console.log(contract);
+    console.log(account[0]);
     
     ipfs.files.add(bufferedFile,(err,res)=>{
     if(err){
@@ -61,6 +81,20 @@ uploadButton.addEventListener('click',(event)=>{
     }
         console.log("Sexcess");
         console.log(res[0].hash);
+
+        contract.methods.uploadHash(res[0].hash).send({from:account[0]}).then(
+            (data) =>{
+                console.log(data);
+                console.log('added');
+                contract.methods.getHash().call().then(
+                    (val)=>{
+                        console.log('innn',val);
+                    }
+                )
+
+            }
+        )
+
     
     })
 
