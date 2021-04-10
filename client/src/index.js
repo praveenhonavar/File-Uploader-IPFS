@@ -74,6 +74,10 @@ uploadButton.addEventListener('click',(event)=>{
 
     console.log(contract);
     console.log(account[0]);
+
+    // var fileName = document.getElementById("fileName").value;
+    // console.log(fileName);
+    var fileName="pd";
     
     ipfs.files.add(bufferedFile,(err,res)=>{
     if(err){
@@ -82,7 +86,7 @@ uploadButton.addEventListener('click',(event)=>{
         console.log("Sexcess");
         console.log(res[0].hash);
 
-        contract.methods.uploadHash(res[0].hash).send({from:account[0]}).then(
+        contract.methods.uploadHash(res[0].hash,fileName).send({from:account[0]}).then(
             (data) =>{
                 console.log(data);
                 console.log('added');
