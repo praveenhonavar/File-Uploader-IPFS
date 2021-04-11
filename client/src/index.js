@@ -3,6 +3,9 @@ import Web3 from "web3";
 
 import ipfs from "./ipfs";
 
+import swal from 'sweetalert';
+
+
 import HashStorageContract from "./contracts/HashStorage.json";
 
 var contract;
@@ -70,6 +73,11 @@ chooseButton.addEventListener('change',(event)=>{
 
 uploadButton.addEventListener('click',(event)=>{
     event.preventDefault();
+
+    var p = document.createElement('h1');
+    p.innerText = "PD";
+    
+    
     console.log(bufferedFile);
 
     console.log(contract);
@@ -83,13 +91,23 @@ uploadButton.addEventListener('click',(event)=>{
     if(err){
         return console.log('Error',err);
     }
+        
         console.log("Sexcess");
         console.log(res[0].hash);
+
+       
 
         contract.methods.uploadHash(res[0].hash,fileName).send({from:account[0]}).then(
             (data) =>{
                 console.log(data);
                 console.log('added');
+                swal({
+                    title: "File Shared Successfully !",
+                    text: `Your file is uploded to IPFS with the following Hash Value
+                            ${res[0].hash}`,
+                    icon: "success",
+                    button: "Done!",
+                  });
                 contract.methods.getHash().call().then(
                     (val)=>{
                         console.log('innn',val);

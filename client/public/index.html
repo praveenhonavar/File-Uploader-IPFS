@@ -1,65 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!-- <link rel="icon" href="%PUBLIC_URL%/Secure.ico" /> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-    <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="utf-8" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
 
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Secure Share</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <link rel="stylesheet" href="style.css">
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+  <title>Secure Share</title>
+</head>
 
-    <!-- <input type="text" id="fileName"> -->
+<header>
 
-    <input type="file"  id="choose">
+  <!-- <img src="./assets/logo.png" alt="logo" class="logo"> -->
 
-    <input type="button" value="upload" id="upload">
+  <nav>
+      <ul class='nav-items'>
+              <li>
+                      Home
+              
+              </li>
+          
+              <li>
+                      Upload
+              </li>
+              
+              <li>
+                      Log in | Sign Up
+              </li>
+      </ul>
+  </nav>
 
+</header>
 
-    
+<body>
 
+  <div id="root"></div>
 
+  <h1>
+    Share your Health Records safely using Secure Share
+  </h1>
 
+  <!-- <img src="./assets/logo.png" alt=""> -->
 
+  <div id="container-box">
 
+    <div id="upload-box">
 
+      <div id="select-file">
 
+        <input id="choose" type="file" name="fileUpload" />
+  
+      </div>
 
-    
-    <script src="../src/index.js"></script>
-  </body>
+      <label for="choose" id="file-select">
+
+        <i class="fa fa-download fa-5x" aria-hidden="true" ></i>
+
+        <!-- <span id="file-select-btn" class="btn btn-primary">Select a file</span> -->
+  
+        </label>
+
+      <h3>Select a File which you want to Share</h3>
+
+    </div>
+
+  </div>
+
+  <div id="upload-file">
+
+    <input type="button" value="Upload to IPFS" id="upload" name="upload-btn">
+
+    <label for="upload">
+      <span id="file-upload-btn" class="btn">Share your File</span>
+    </label>
+
+  </div>
+  
+  <script src="../src/index.js"></script>
+</body>
+
 </html>
