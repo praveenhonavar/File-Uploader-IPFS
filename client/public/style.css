@@ -1,4 +1,7 @@
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+/* @import url(https://maxcdn.bootstrapcdn.com/font-awesome/5.1.3/css/font-awesome.min.css); */
+/* @import url('/font-awesome-4.6.3/css/font-awesome.min.css'); */
+/* @import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css); */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css);
 
 body {
   height: 100%;
@@ -84,6 +87,10 @@ i {
   /* background-color:  */
 }
 
+#file-upload-btn:hover{
+    box-shadow:10px 10px #171e2e;
+}
+
 h1 {
   color: white;
   font-size: 40px;
@@ -95,6 +102,25 @@ h3 {
   color: #d9d9da;
 }
 
+/* #upload-icon{
+  margin-top: -0.2em;
+} */
+
 .fa-download{
-  color:#00ffa4;
+  color:#d9d9da;
+}
+
+.fa-file-medical{
+  color:#00ffa4
+}
+
+#pw{
+  color: #d9d9da;
+}
+
+#loader{
+  /* margin-top: -9em; */
+  margin-left: 16em;
+  width: 30%;
+  height: 50%;
 }

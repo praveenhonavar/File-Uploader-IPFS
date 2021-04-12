@@ -11,14 +11,27 @@ import HashStorageContract from "./contracts/HashStorage.json";
 var contract;
 var account;
 
-
-
 var bufferedFile;
 
 var chooseButton =document.getElementById('choose');
 var uploadButton =document.getElementById('upload');
 
+var fileAddedIcon = document.getElementById("file-added");
+var uploadIcon = document.getElementById("upload-icon");
+
+
+var loader = document.getElementById("loader");
+var pw = document.getElementById("pw");
+var beforeAdd = document.getElementById('before-add');
+var afterAdd = document.getElementById('after-add');
+
+
 window.addEventListener("load",async () => {
+
+    fileAddedIcon.style.display='none';
+    loader.style.display='none';
+    pw.style.display='none';
+
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum)
       await window.ethereum.enable()
@@ -59,6 +72,18 @@ chooseButton.addEventListener('change',(event)=>{
     console.log('capture');
     console.log(event);
     const file = event.target.files[0];
+    console.log(file.name);
+
+    // console.log(uploadIcon);
+    fileAddedIcon.style.display='block';
+    uploadIcon.style.display='none';
+    beforeAdd.style.display='none';
+
+    afterAdd.innerText=`Your have selected the file ${file.name}\n
+    Click on Share to Proceed`;
+
+    // var fileUplodedIcon = document.getElementById("added-icon");
+    // fileUplodedIcon.style.color = "#ffffff";
 
     const reader = new window.FileReader();
 
@@ -74,18 +99,24 @@ chooseButton.addEventListener('change',(event)=>{
 uploadButton.addEventListener('click',(event)=>{
     event.preventDefault();
 
-    var p = document.createElement('h1');
-    p.innerText = "PD";
-    
-    
     console.log(bufferedFile);
 
     console.log(contract);
     console.log(account[0]);
 
+    fileAddedIcon.style.display='none';
+    afterAdd.innerText='';
+
+    loader.style.display='block';
+    pw.style.display='block';
+
+   
+
+
+
     // var fileName = document.getElementById("fileName").value;
     // console.log(fileName);
-    var fileName="pd";
+    var fileName = "pd";
     
     ipfs.files.add(bufferedFile,(err,res)=>{
     if(err){
@@ -95,12 +126,19 @@ uploadButton.addEventListener('click',(event)=>{
         console.log("Sexcess");
         console.log(res[0].hash);
 
-       
-
         contract.methods.uploadHash(res[0].hash,fileName).send({from:account[0]}).then(
             (data) =>{
                 console.log(data);
                 console.log('added');
+
+                loader.style.display='none';
+                pw.style.display='none';
+
+                uploadIcon.style.display='block';
+                beforeAdd.style.display='block';
+
+                
+
                 swal({
                     title: "File Shared Successfully !",
                     text: `Your file is uploded to IPFS with the following Hash Value
