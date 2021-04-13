@@ -8,6 +8,8 @@ import swal from 'sweetalert';
 
 import HashStorageContract from "./contracts/HashStorage.json";
 
+
+var file;
 var contract;
 var account;
 
@@ -71,7 +73,7 @@ chooseButton.addEventListener('change',(event)=>{
     event.preventDefault();
     console.log('capture');
     console.log(event);
-    const file = event.target.files[0];
+    file = event.target.files[0];
     console.log(file.name);
 
     // console.log(uploadIcon);
@@ -99,6 +101,8 @@ chooseButton.addEventListener('change',(event)=>{
 uploadButton.addEventListener('click',(event)=>{
     event.preventDefault();
 
+
+
     console.log(bufferedFile);
 
     console.log(contract);
@@ -112,11 +116,11 @@ uploadButton.addEventListener('click',(event)=>{
 
    
 
-
+    var fileName = file.name;
 
     // var fileName = document.getElementById("fileName").value;
     // console.log(fileName);
-    var fileName = "pd";
+    // var fileName = "pd";
     
     ipfs.files.add(bufferedFile,(err,res)=>{
     if(err){

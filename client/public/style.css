@@ -24,11 +24,7 @@ input[name="upload-btn"] {
   display: none;
 }
 
-.nav-items {
-  display: inline-flex;
-  justify-content: space-between;
-  list-style: none;
-}
+
 
 .btn {
   display: inline-block;
@@ -68,7 +64,7 @@ input[name="upload-btn"] {
   width: 48em;
   height: 18em;
   background-color: #171e2e;
-  margin-top: 5em;
+  margin-top: 2em;
   border-radius: 1em;
 }
 
@@ -114,6 +110,10 @@ h3 {
   color:#00ffa4
 }
 
+#secure-share{
+  color: #00ffa4;
+}
+
 #pw{
   color: #d9d9da;
 }
@@ -123,4 +123,15 @@ h3 {
   margin-left: 16em;
   width: 30%;
   height: 50%;
+}
+
+#logo{
+  margin-top: 2em;
+  height:4em;
+  /* margin-left: -25em; */
+  /* padding: 20px; */
+}
+
+#heading{
+  margin-top: 1em;
 }
