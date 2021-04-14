@@ -27,6 +27,10 @@ var pw = document.getElementById("pw");
 var beforeAdd = document.getElementById('before-add');
 var afterAdd = document.getElementById('after-add');
 
+// var doc1 = document.getElementById("doc1");
+
+// console.log(doc1);
+
 
 window.addEventListener("load",async () => {
 
@@ -117,6 +121,7 @@ uploadButton.addEventListener('click',(event)=>{
    
 
     var fileName = file.name;
+    var receiver = '0x7Df61A1514aa8A8ABF66866f34B410Ee5150274C';
 
     // var fileName = document.getElementById("fileName").value;
     // console.log(fileName);
@@ -130,7 +135,7 @@ uploadButton.addEventListener('click',(event)=>{
         console.log("Sexcess");
         console.log(res[0].hash);
 
-        contract.methods.uploadHash(res[0].hash,fileName).send({from:account[0]}).then(
+        contract.methods.uploadHash(res[0].hash,fileName,account[0],receiver).send({from:account[0]}).then(
             (data) =>{
                 console.log(data);
                 console.log('added');
