@@ -31,6 +31,9 @@ var afterAdd = document.getElementById('after-add');
 
 // console.log(doc1);
 
+// var sel = document.getElementById("sel");
+// console.log(sel);
+
 
 window.addEventListener("load",async () => {
 
