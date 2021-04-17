@@ -121,15 +121,13 @@ uploadButton.addEventListener('click',(event)=>{
     loader.style.display='block';
     pw.style.display='block';
 
-   
-
     var fileName = file.name;
     var receiver = '0x7Df61A1514aa8A8ABF66866f34B410Ee5150274C';
 
     // var fileName = document.getElementById("fileName").value;
     // console.log(fileName);
     // var fileName = "pd";
-    
+    document.getElementsByClassName()
     ipfs.files.add(bufferedFile,(err,res)=>{
     if(err){
         return console.log('Error',err);
@@ -166,8 +164,6 @@ uploadButton.addEventListener('click',(event)=>{
 
             }
         )
-
-    
     })
 
 })

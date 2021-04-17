@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="./HomePage.css"  type="text/css">
 </head>
 
@@ -24,27 +26,74 @@
     <ul id="nav-items">
     
 
-      <li>About Us</li>
+      <li id="about-us">About Us</li>
 
-      <li>Features</li>
+      <li id="features">Features</li>
 
       <li>
-        <button>Log IN</button>
+
+        <button id="login"></button>
+
+        <label for="login" id="login">
+
+          <p>Log IN</p>
+          
+        </label>
+
       </li>
 
       <li>
-        <button>
-          Register
-        </button>
-      </li>
 
+        <button id="register">Register</button>
+        <label for="register" id="register">
+         <p>Register</p>
+        </label>
+      </li>
     </ul>
-
   </header>
    
 <div id="content">
 
+  <div id="description">
+
+    <h1>
+      Share your Electronic Health Records<br><span>Securely</span> using IPFS & Blockchain
+    </h1>
+
+    <br>
+    <br>
+
+      <p>
+        Electronic Health Records are encrypted and uploaded to IPFS,<br> 
+        which is a decentralized file storage system. This files can later<br>
+        be retrived by the person to whom it was intended to share with.
+      </p>
+      
+  </div>
+
+  <img src="assets/bc-hp.png" alt="" id="bc-img">
+
+  <div id="buttons">
+    <input type="button" value="Learn More" id="learn-more">
+    <input type="button" value="Get Started" id="get-started">
+  </div>
+
 </div>
+
+<div id="features-container">
+
+
+
+</div>
+
+<div id="footer">
+
+  <p>Made with ❤ </p>
+
+</div>
+
+
+
 
 </body>
 </html>

@@ -24,6 +24,13 @@ ul{
   align-content: center;
 }
 
+#content{
+  max-width: 1080px;
+  margin: auto;
+  height: 70vh;
+}
+
+
  
 #nav-items{
   margin-left: 40em;
@@ -32,6 +39,7 @@ ul{
 #nav-items li{
   padding-right: 5em;
   color: #d9d9d9;
+  font-weight: bolder;
 }
 
 #logo{
@@ -40,15 +48,109 @@ ul{
   margin-top: -0.5em;
 }
 
+#bc-img{
+  position: absolute;
+  margin-top: -15em;
+  margin-left: 44em;
+  width: 25em;
+  height: 25em;
+}
 
-
-/* header{
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
+#description{
+  margin-top: 10em;
+  margin-left: 4em;
   color: #d9d9d9;
+}
+
+#learn-more{
   padding: 1em;
-} */
+  border-radius: 2em;
+  width: 10em;
+  border-color: #d9d9d9;
+  color: #d9d9d9;
+  background-color: #0d1320;
+  cursor: pointer;
+}
+
+#get-started{
+  padding: 1em;
+  border-radius: 2em;
+  width: 10em;
+  border: none;
+  background-color: #00ffa4;
+  color: black;
+  font-weight: bolder;
+  margin-left: 1em;
+  cursor: pointer;
+}
+
+#get-started:hover{
+  box-shadow:5px 5px black;
+}
+
+#buttons{ 
+  margin-top: 3em;
+  margin-left: 4em;
+}
+
+span{
+  color: #00ffa4;
+}
+
+
+#features-container{
+  background-color: #d9d9d9;
+  height: 100vh;
+}
+
+#footer{
+  background-color: #171e2e;
+  height: 10vh;
+  padding-top: 2em;
+  /* margin-top: 2em; */
+  text-align: center;
+  color: #d9d9d9;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+button{
+  display: none;
+}
+
+
+
+#about-us:hover{
+  cursor: pointer;
+color: #00ffa4;
+}
+
+#features:hover{
+  cursor: pointer;
+  color: #00ffa4;
+}
+  
+#login:hover{
+  cursor: pointer;
+  color: #00ffa4;
+}
+
+#register:hover{
+  cursor: pointer;
+  color: #00ffa4;
+}
 
 
 
