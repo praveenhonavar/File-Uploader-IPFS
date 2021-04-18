@@ -5,8 +5,9 @@ import ipfs from "./ipfs";
 
 import swal from 'sweetalert';
 
-
 import HashStorageContract from "./contracts/HashStorage.json";
+
+var address = require('./select');
 
 
 var file;
@@ -33,6 +34,8 @@ var afterAdd = document.getElementById('after-add');
 
 // var sel = document.getElementById("sel");
 // console.log(sel);
+
+console.log('aldokfoafa',address);
 
 
 window.addEventListener("load",async () => {
@@ -127,7 +130,10 @@ uploadButton.addEventListener('click',(event)=>{
     // var fileName = document.getElementById("fileName").value;
     // console.log(fileName);
     // var fileName = "pd";
-    document.getElementsByClassName()
+    // document.getElementsByClassName()
+
+
+    
     ipfs.files.add(bufferedFile,(err,res)=>{
     if(err){
         return console.log('Error',err);

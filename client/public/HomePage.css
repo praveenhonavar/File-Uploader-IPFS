@@ -30,8 +30,6 @@ ul{
   height: 70vh;
 }
 
-
- 
 #nav-items{
   margin-left: 40em;
 } 
@@ -101,7 +99,20 @@ span{
 #features-container{
   background-color: #d9d9d9;
   height: 100vh;
+  text-align: center;
 }
+
+#features-container img{
+  width: 25em;
+  height: 25em;
+}
+
+h3{
+  margin-top: -5em;
+  color: #171e17;
+  font-weight: bolder;
+}
+
 
 #footer{
   background-color: #171e2e;
