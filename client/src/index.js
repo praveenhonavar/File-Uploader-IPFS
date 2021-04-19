@@ -7,8 +7,18 @@ import swal from 'sweetalert';
 
 import HashStorageContract from "./contracts/HashStorage.json";
 
-var address = require('./select');
+// import nosu from "./select";
 
+// console.log('olololollllo',nosu);
+
+
+// var pd = require('./select.js').default;
+
+// console.log('dldlpdpd',pd);
+
+var kppd = localStorage.getItem('ethAdd');
+
+console.log(kppd);
 
 var file;
 var contract;
@@ -35,7 +45,6 @@ var afterAdd = document.getElementById('after-add');
 // var sel = document.getElementById("sel");
 // console.log(sel);
 
-console.log('aldokfoafa',address);
 
 
 window.addEventListener("load",async () => {
@@ -110,8 +119,6 @@ chooseButton.addEventListener('change',(event)=>{
 
 uploadButton.addEventListener('click',(event)=>{
     event.preventDefault();
-
-
 
     console.log(bufferedFile);
 
