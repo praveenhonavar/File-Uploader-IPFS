@@ -16,6 +16,20 @@ import HashStorageContract from "./contracts/HashStorage.json";
 
 // console.log('dldlpdpd',pd);
 
+
+var firebaseConfig = {
+    apiKey: "AIzaSyB_vhcD4mYoLPdUHdYmzXQ-eMuIbGlGKUk",
+    authDomain: "test-fb-afced.firebaseapp.com",
+    projectId: "test-fb-afced",
+    storageBucket: "test-fb-afced.appspot.com",
+    messagingSenderId: "623756959006",
+    appId: "1:623756959006:web:2e2c6f17e3b79f70163d0f"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  console.log(firebase);
+
+
 var kppd = localStorage.getItem('ethAdd');
 
 console.log(kppd);
@@ -87,9 +101,30 @@ window.addEventListener("load",async () => {
     }
   })
 
+  function selectedAddress() {
+
+    
+    // Initialize Firebase
+      
+    
+    // Set database variable
+    var storedAddress = firebase.database().ref("selectedAddress");
+    console.log(storedAddress);
+
+    storedAddress.on('value',(data)=>{
+        console.log(data.val());
+    })
+
+  }
+
+
 
 chooseButton.addEventListener('change',(event)=>{
     event.preventDefault();
+
+    var rAdd = selectedAddress();
+    console.log(rAdd);
+
     console.log('capture');
     console.log(event);
     file = event.target.files[0];

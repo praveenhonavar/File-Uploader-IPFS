@@ -35,6 +35,7 @@ function save() {
 
 
 function get() {
+  
   var username = document.getElementById('username').value
 
   var user_ref = database.ref('users/' + username)

@@ -1,30 +1,6 @@
 // const ponu = '0x7Df61A1514aa8A8ABF66866f34B410Ee5150274C';
 
 
-var firebaseConfig = {
-    apiKey: "AIzaSyB_vhcD4mYoLPdUHdYmzXQ-eMuIbGlGKUk",
-    authDomain: "test-fb-afced.firebaseapp.com",
-    projectId: "test-fb-afced",
-    storageBucket: "test-fb-afced.appspot.com",
-    messagingSenderId: "623756959006",
-    appId: "1:623756959006:web:2e2c6f17e3b79f70163d0f"
-  };
-
-firebase.initializeApp(firebaseConfig);
-
-console.log(firebase);
-
-
-// window.addEventListener('load',()=>{
-//     console.log('fefefefefe');
-//     getAddress();
-// })
-
-// // Initialize Firebase
-// function getAddress(){
-
-// console.log('pkpfkpe');
-
 // var firebaseConfig = {
 //     apiKey: "AIzaSyB_vhcD4mYoLPdUHdYmzXQ-eMuIbGlGKUk",
 //     authDomain: "test-fb-afced.firebaseapp.com",
@@ -35,12 +11,32 @@ console.log(firebase);
 //   };
 
 // firebase.initializeApp(firebaseConfig);
+
 // console.log(firebase);
 
 
+window.addEventListener('load',()=>{
+    console.log('fefefefefe');
+    getAddress();
+})
+
+// // Initialize Firebase
+function getAddress(){
+
+console.log('pkpfkpe');
+
+var firebaseConfig = {
+    apiKey: "AIzaSyB_vhcD4mYoLPdUHdYmzXQ-eMuIbGlGKUk",
+    authDomain: "test-fb-afced.firebaseapp.com",
+    projectId: "test-fb-afced",
+    storageBucket: "test-fb-afced.appspot.com",
+    messagingSenderId: "623756959006",
+    appId: "1:623756959006:web:2e2c6f17e3b79f70163d0f"
+  };
 
 
-   
+    firebase.initializeApp(firebaseConfig);
+    console.log(firebase);
 
     var databaseUser = firebase.database().ref("users");
 
@@ -66,10 +62,9 @@ console.log(firebase);
                 selectTab.innerHTML += `<option value=${index}>${ethAddress}</option>`
 
         }
-
     
     })
-
+}
 // }
 
 
@@ -78,8 +73,11 @@ function dispAddress() {
     var displayedAddress = ethAdd.options[ethAdd.selectedIndex];
     var actualAddress = displayedAddress.text;
     console.log(actualAddress);
+    storeAddress(actualAddress);
 
-    localStorage.setItem("ethAdd",actualAddress);
+    // localStorage.setItem("ethAdd",actualAddress);
+
+
     
     // export default actualAddress;
 
@@ -87,6 +85,16 @@ function dispAddress() {
 
     // export default ponu;
 
+function  storeAddress(selectedAddress) {
+    var storeAddress = firebase.database();
+    console.log(storeAddress);
+
+    storeAddress.ref('selectedAddress').set({
+        selectedAddress : selectedAddress
+    })
+    console.log("added");
+
+}
 
 
 
