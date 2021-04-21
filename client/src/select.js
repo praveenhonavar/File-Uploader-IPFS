@@ -1,6 +1,5 @@
 // const ponu = '0x7Df61A1514aa8A8ABF66866f34B410Ee5150274C';
 
-
 // var firebaseConfig = {
 //     apiKey: "AIzaSyB_vhcD4mYoLPdUHdYmzXQ-eMuIbGlGKUk",
 //     authDomain: "test-fb-afced.firebaseapp.com",
@@ -14,6 +13,7 @@
 
 // console.log(firebase);
 
+var ethAdd = document.getElementById('ethereum-address');
 
 window.addEventListener('load',()=>{
     console.log('fefefefefe');
@@ -67,18 +67,22 @@ var firebaseConfig = {
 }
 // }
 
+ethAdd.addEventListener('change',()=>{
+    dispAddress();
+})
 
 function dispAddress() {
-    var ethAdd = document.getElementById('ethereum-address');
+    // var ethAdd = document.getElementById('ethereum-address');
     var displayedAddress = ethAdd.options[ethAdd.selectedIndex];
     var actualAddress = displayedAddress.text;
     console.log(actualAddress);
+    
     storeAddress(actualAddress);
 
     // localStorage.setItem("ethAdd",actualAddress);
 
-
-    
+    var lp = document.getElementById("fName")
+    console.log(lp);
     // export default actualAddress;
 
 }
@@ -94,13 +98,25 @@ function  storeAddress(selectedAddress) {
     })
     console.log("added");
 
-}
+   
 
 
+    
+//   const fs = require('fs');
+// // Data which will write in a file.
+//     let data = "Learning how to write in a file."
+  
+// // Write data in 'Output.txt' .
+//     fs.writeFile("../assets/pd.txt",data, (err) => {
+      
+//     // In case of a error throw err.
+//         if (err) throw err;
+//         else{
+//             console.log('daloo');
+//         }
+//     })
 
-
-
-
+    }
 
 // // Set database variable
 

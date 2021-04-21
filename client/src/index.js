@@ -7,32 +7,27 @@ import swal from 'sweetalert';
 
 import HashStorageContract from "./contracts/HashStorage.json";
 
-// import nosu from "./select";
-
-// console.log('olololollllo',nosu);
-
-
 // var pd = require('./select.js').default;
 
 // console.log('dldlpdpd',pd);
 
+// var firebaseConfig = {
+//     apiKey: "AIzaSyB_vhcD4mYoLPdUHdYmzXQ-eMuIbGlGKUk",
+//     authDomain: "test-fb-afced.firebaseapp.com",
+//     projectId: "test-fb-afced",
+//     storageBucket: "test-fb-afced.appspot.com",
+//     messagingSenderId: "623756959006",
+//     appId: "1:623756959006:web:2e2c6f17e3b79f70163d0f"
+//   };
 
-var firebaseConfig = {
-    apiKey: "AIzaSyB_vhcD4mYoLPdUHdYmzXQ-eMuIbGlGKUk",
-    authDomain: "test-fb-afced.firebaseapp.com",
-    projectId: "test-fb-afced",
-    storageBucket: "test-fb-afced.appspot.com",
-    messagingSenderId: "623756959006",
-    appId: "1:623756959006:web:2e2c6f17e3b79f70163d0f"
-  };
+//   firebase.initializeApp(firebaseConfig);
+//   console.log(firebase);
+  // selectedAddress();
 
-  firebase.initializeApp(firebaseConfig);
-  console.log(firebase);
+//   console.log('dwdwdw',fb);
 
+//   firebase.initializeApp(firebaseConfig);
 
-var kppd = localStorage.getItem('ethAdd');
-
-console.log(kppd);
 
 var file;
 var contract;
@@ -61,8 +56,10 @@ var afterAdd = document.getElementById('after-add');
 
 
 
+
 window.addEventListener("load",async () => {
 
+    // console.log('wlpflwpflwfwpfw',firebase);
     fileAddedIcon.style.display='none';
     loader.style.display='none';
     pw.style.display='none';
@@ -101,29 +98,38 @@ window.addEventListener("load",async () => {
     }
   })
 
-  function selectedAddress() {
+  // function selectedAddress() {
 
     
-    // Initialize Firebase
+  //   // Initialize Firebase
       
     
-    // Set database variable
-    var storedAddress = firebase.database().ref("selectedAddress");
-    console.log(storedAddress);
+  //   // Set database variable
+  //   var storedAddress = firebase.database().ref("selectedAddress");
+  //   console.log(storedAddress);
 
-    storedAddress.on('value',(data)=>{
-        console.log(data.val());
-    })
+  //   storedAddress.on('value',(data)=>{
+  //       console.log(data.val());
 
-  }
+  //       var info = data.val();
+
+  //       var k = Object.keys(data.val());
+
+  //       console.log('maal',k);
+
+  //       var ass = info[k];
+  //       console.log('storedAddress',ass);
+  //   })
+
+  // }
 
 
 
 chooseButton.addEventListener('change',(event)=>{
     event.preventDefault();
 
-    var rAdd = selectedAddress();
-    console.log(rAdd);
+    // var rAdd = selectedAddress();
+    // console.log(rAdd);
 
     console.log('capture');
     console.log(event);
@@ -154,6 +160,11 @@ chooseButton.addEventListener('change',(event)=>{
 
 uploadButton.addEventListener('click',(event)=>{
     event.preventDefault();
+
+
+
+ 
+  // selectedAddress();
 
     console.log(bufferedFile);
 
