@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("assets/map.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color:#323948; */
+    align-items: center;
+}
+
+#logo{
+    position: absolute;
+    margin-left: 36em;
+    margin-top: 3em;
+    width: 11em;
+}
+
+#container-box{
+    display: flex;
+    justify-content: center;
+}
+
+#login-container{
+    margin-top: 11em;
+    width: 22em;
+    height: 22em;
+    background-color: #171e2e;
+    border-radius: 0.5em;
+}
+
+#content{
+    margin: 2em;
+    text-align: center;
+}
+
+

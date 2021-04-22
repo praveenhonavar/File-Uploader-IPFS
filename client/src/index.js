@@ -7,9 +7,12 @@ import swal from 'sweetalert';
 
 import HashStorageContract from "./contracts/HashStorage.json";
 
-// var pd = require('./select.js').default;
+import sonu from "./newSelect";
 
-// console.log('dldlpdpd',pd);
+console.log(sonu);
+
+// var firebase = require('firebase');
+// var fs = require('fs');
 
 // var firebaseConfig = {
 //     apiKey: "AIzaSyB_vhcD4mYoLPdUHdYmzXQ-eMuIbGlGKUk",
@@ -20,13 +23,41 @@ import HashStorageContract from "./contracts/HashStorage.json";
 //     appId: "1:623756959006:web:2e2c6f17e3b79f70163d0f"
 //   };
 
-//   firebase.initializeApp(firebaseConfig);
-//   console.log(firebase);
-  // selectedAddress();
 
-//   console.log('dwdwdw',fb);
+// // console.log(firebase);
 
-//   firebase.initializeApp(firebaseConfig);
+// firebase.initializeApp(firebaseConfig);
+
+// var storedAddress = firebase.database().ref("selectedAddress");
+// // console.log(storedAddress);
+
+//     storedAddress.on('value',(data)=>{
+//     console.log(data.val());
+
+
+//     var info = data.val();
+
+//     var k = Object.keys(data.val());
+
+//     console.log('maal',k);
+
+
+//     var ass = info[k];
+
+//     console.log('storedAddress',ass);
+
+//     fs.writeFile("../public/assets/pd.txt",ass,(err)=>{
+//             if(err){
+//                 throw err
+//             }
+//             else{
+//                 console.log('adeded');
+//             }
+//     })
+
+
+
+//     })
 
 
 var file;
@@ -46,6 +77,11 @@ var loader = document.getElementById("loader");
 var pw = document.getElementById("pw");
 var beforeAdd = document.getElementById('before-add');
 var afterAdd = document.getElementById('after-add');
+// var fileName = document.querySelector("#document");
+var fileName = document.getElementById("file-name");
+
+
+console.log(fileName);
 
 // var doc1 = document.getElementById("doc1");
 
@@ -161,6 +197,11 @@ chooseButton.addEventListener('change',(event)=>{
 uploadButton.addEventListener('click',(event)=>{
     event.preventDefault();
 
+    var fn = fileName.value;
+
+    console.log(fn);
+
+    
 
 
  
