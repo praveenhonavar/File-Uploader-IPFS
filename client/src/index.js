@@ -7,9 +7,7 @@ import swal from 'sweetalert';
 
 import HashStorageContract from "./contracts/HashStorage.json";
 
-import sonu from "./newSelect";
 
-console.log(sonu);
 
 // var firebase = require('firebase');
 // var fs = require('fs');
@@ -197,9 +195,9 @@ chooseButton.addEventListener('change',(event)=>{
 uploadButton.addEventListener('click',(event)=>{
     event.preventDefault();
 
-    var fn = fileName.value;
+    // var fn = fileName.value;
 
-    console.log(fn);
+    // console.log(fn);
 
     
 

@@ -1,3 +1,5 @@
+
+
 // var firebaseConfig = {
 //     apiKey: "AIzaSyB_vhcD4mYoLPdUHdYmzXQ-eMuIbGlGKUk",
 //     authDomain: "test-fb-afced.firebaseapp.com",
@@ -56,6 +58,9 @@
 //     console.log('runnndin');
 // })
 
+// var pp = document.getElementById('file-name');
+// console.log('kokok',pp);
+
 var firebase = require('firebase');
 var fs = require('fs');
 
@@ -91,7 +96,7 @@ var storedAddress = firebase.database().ref("selectedAddress");
 
     console.log('storedAddress',ass);
 
-   
+
 
     fs.writeFile("../public/assets/pd.txt",ass,(err)=>{
             if(err){
@@ -101,7 +106,6 @@ var storedAddress = firebase.database().ref("selectedAddress");
                 console.log('adeded');
             }
     })
-    
 })
 
 
