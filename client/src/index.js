@@ -7,7 +7,9 @@ import swal from 'sweetalert';
 
 import HashStorageContract from "./contracts/HashStorage.json";
 
+import a from './test';
 
+console.log(a);
 
 // var firebase = require('firebase');
 // var fs = require('fs');

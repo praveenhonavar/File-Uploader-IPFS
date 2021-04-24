@@ -94,11 +94,17 @@ var storedAddress = firebase.database().ref("selectedAddress");
 
     var ass = info[k];
 
-    console.log('storedAddress',ass);
+    var aObj ={
+        'receiver':ass
+    }
+
+    aJson = JSON.parse(aObj);
+
+    console.log('storedAddress',aJson);
 
 
 
-    fs.writeFile("../public/assets/pd.txt",ass,(err)=>{
+    fs.writeFile("./test.json",aJson,(err)=>{
             if(err){
                 throw err
             }
