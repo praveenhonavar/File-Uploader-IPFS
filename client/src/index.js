@@ -7,9 +7,9 @@ import swal from 'sweetalert';
 
 import HashStorageContract from "./contracts/HashStorage.json";
 
-import a from './test';
+import receiverAddress from './test.json';
 
-console.log(a);
+console.log(receiverAddress);
 
 // var firebase = require('firebase');
 // var fs = require('fs');
@@ -219,7 +219,7 @@ uploadButton.addEventListener('click',(event)=>{
     pw.style.display='block';
 
     var fileName = file.name;
-    var receiver = '0x7Df61A1514aa8A8ABF66866f34B410Ee5150274C';
+    var receiver = receiverAddress.selectedAddress;
 
     // var fileName = document.getElementById("fileName").value;
     // console.log(fileName);

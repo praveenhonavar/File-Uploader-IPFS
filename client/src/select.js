@@ -95,8 +95,9 @@ function  storeAddress(selectedAddress) {
 
     storeAddress.ref('selectedAddress').set({
         selectedAddress : selectedAddress
+        
     })
-    console.log("added");
+    console.log("added to firebase");
 
    
 

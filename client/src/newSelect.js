@@ -63,6 +63,7 @@
 
 var firebase = require('firebase');
 var fs = require('fs');
+const { stringify } = require('querystring');
 
 var firebaseConfig = {
     apiKey: "AIzaSyB_vhcD4mYoLPdUHdYmzXQ-eMuIbGlGKUk",
@@ -82,7 +83,8 @@ var storedAddress = firebase.database().ref("selectedAddress");
 // console.log(storedAddress);
 
     storedAddress.on('value',(data)=>{
-    console.log(data.val());
+    
+    console.log("dlspdlsp",data.val());
 
 
     var info = data.val();
@@ -94,22 +96,23 @@ var storedAddress = firebase.database().ref("selectedAddress");
 
     var ass = info[k];
 
-    var aObj ={
-        'receiver':ass
-    }
+    // var aObj ={
+    //     "receiver":"pd"
+    // }
 
-    aJson = JSON.parse(aObj);
+    // res = JSON.parse(aObj);
 
-    console.log('storedAddress',aJson);
+    // console.log('storedAddress',res);
+        // console.log(ass);
 
+    var res = JSON.stringify(info);
 
-
-    fs.writeFile("./test.json",aJson,(err)=>{
+    fs.writeFile("./test.json",res,(err)=>{
             if(err){
                 throw err
             }
             else{
-                console.log('adeded');
+                console.log('adeded to file');
             }
     })
 })
