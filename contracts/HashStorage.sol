@@ -14,8 +14,8 @@ contract HashStorage {
     uint fileId,
     string ipfsValue,
     string fileName,
-    address receiver,
-    address sender
+    address sender,
+    address receiver
   );
 
   function uploadHash(string memory x,string memory y,address a,address b) public {

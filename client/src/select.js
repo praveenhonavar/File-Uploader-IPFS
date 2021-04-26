@@ -1,22 +1,9 @@
-// const ponu = '0x7Df61A1514aa8A8ABF66866f34B410Ee5150274C';
-
-// var firebaseConfig = {
-//     apiKey: "AIzaSyB_vhcD4mYoLPdUHdYmzXQ-eMuIbGlGKUk",
-//     authDomain: "test-fb-afced.firebaseapp.com",
-//     projectId: "test-fb-afced",
-//     storageBucket: "test-fb-afced.appspot.com",
-//     messagingSenderId: "623756959006",
-//     appId: "1:623756959006:web:2e2c6f17e3b79f70163d0f"
-//   };
-
-// firebase.initializeApp(firebaseConfig);
-
-// console.log(firebase);
-
 var ethAdd = document.getElementById('ethereum-address');
+var proceedArrow = document.getElementById("proceed-arrow");
 
 window.addEventListener('load',()=>{
     console.log('fefefefefe');
+    proceedArrow.style.display='none';
     getAddress();
 })
 
@@ -64,6 +51,8 @@ var firebaseConfig = {
         }
     
     })
+
+
 }
 // }
 
@@ -85,6 +74,9 @@ function dispAddress() {
     console.log(lp);
     // export default actualAddress;
 
+    proceedArrow.style.display='block';
+
+
 }
 
     // export default ponu;
@@ -98,65 +90,8 @@ function  storeAddress(selectedAddress) {
         
     })
     console.log("added to firebase");
-
-   
-
-
-    
-//   const fs = require('fs');
-// // Data which will write in a file.
-//     let data = "Learning how to write in a file."
-  
-// // Write data in 'Output.txt' .
-//     fs.writeFile("../assets/pd.txt",data, (err) => {
-      
-//     // In case of a error throw err.
-//         if (err) throw err;
-//         else{
-//             console.log('daloo');
-//         }
-//     })
-
-    }
-
-// // Set database variable
-
-// // function get() {
-// //     var username = document.getElementById('username').value
-  
-// //     var user_ref = database.ref('users/' + username)
-// //     user_ref.on('value', function(snapshot) {
-// //       var data = snapshot.val()
-  
-// //       console.log(data.address);
-  
-// //     })
-// //   }
-
-// var firebaseConfig = {
-//     apiKey: "AIzaSyB_vhcD4mYoLPdUHdYmzXQ-eMuIbGlGKUk",
-//     authDomain: "test-fb-afced.firebaseapp.com",
-//     projectId: "test-fb-afced",
-//     storageBucket: "test-fb-afced.appspot.com",
-//     messagingSenderId: "623756959006",
-//     appId: "1:623756959006:web:2e2c6f17e3b79f70163d0f"
-//   };
-
-
-// firebase.initializeApp(firebaseConfig);
-// console.log(firebase);
-
-
-
-
-// var kp = 'nosuuu';
-
-// export default{firebaseConfig};
-
-// export default ponu;
-
-
-
+ 
+}
 
 
 

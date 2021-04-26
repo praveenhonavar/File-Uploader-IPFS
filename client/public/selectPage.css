@@ -46,3 +46,14 @@ i{
 h3{
     color: #00ffa4;
 }
+
+a{
+    text-decoration: none;
+}
+
+
+#proceed-arrow{
+    text-decoration: none;
+    cursor: pointer;
+    color: #d9d9d9;
+}
