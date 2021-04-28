@@ -1,5 +1,6 @@
-// import swal from 'sweetalert';
+var submitButton = document.getElementById("submit");
 
+console.log(submitButton);
 
 
 var firebaseConfig = {
@@ -18,7 +19,7 @@ firebase.initializeApp(firebaseConfig);
 // Set database variable
 var database = firebase.database()
 
-function save() {
+submitButton.addEventListener('click',()=>{
   var email = document.getElementById('email').value
   var password = document.getElementById('password').value
   var username = document.getElementById('username').value
@@ -35,19 +36,15 @@ function save() {
 
   console.log('added');
  
-  // swal({
-  //   title: "You have Successfully Registered !!",
-  //   // text: `Your file is uploded to IPFS with the following Hash Value
-  //   //         ${res[0].hash}`,
-  //   icon: "success",
-  //   button: "Proceed",
-  // });
-
- 
-
+  Swal.fire({
+    icon: 'success',
+    title: 'You have been Registered Successfully',
+    showConfirmButton: false,
+    timer: 2500
+  })
 
   get();
-}
+});
 
 
 function get() {

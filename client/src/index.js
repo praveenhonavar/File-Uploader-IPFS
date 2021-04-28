@@ -3,7 +3,8 @@ import Web3 from "web3";
 
 import ipfs from "./ipfs";
 
-import swal from 'sweetalert';
+import Swal from 'sweetalert2';
+
 
 import HashStorageContract from "./contracts/HashStorage.json";
 
@@ -66,6 +67,8 @@ var account;
 
 var bufferedFile;
 
+var logo = document.getElementById('logo');
+
 var chooseButton =document.getElementById('choose');
 var uploadButton =document.getElementById('upload');
 
@@ -93,7 +96,7 @@ console.log(fileName);
 
 
 
-window.addEventListener("load",async () => {
+window.addEventListener("load", async () => {
 
     // console.log('wlpflwpflwfwpfw',firebase);
     fileAddedIcon.style.display='none';
@@ -191,11 +194,10 @@ chooseButton.addEventListener('change',(event)=>{
         bufferedFile = Buffer.from(reader.result);
         console.log(bufferedFile);
     }
-
 })
 
 uploadButton.addEventListener('click',(event)=>{
-    event.preventDefault();
+event.preventDefault();
 
     // var fn = fileName.value;
 
@@ -249,7 +251,7 @@ uploadButton.addEventListener('click',(event)=>{
 
                 
 
-                swal({
+                Swal.fire({
                     title: "File Shared Successfully !",
                     text: `Your file is uploded to IPFS with the following Hash Value
                             ${res[0].hash}`,
@@ -267,3 +269,4 @@ uploadButton.addEventListener('click',(event)=>{
     })
 
 })
+

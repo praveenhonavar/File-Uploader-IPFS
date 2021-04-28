@@ -1,7 +1,10 @@
+
+
 var ethAdd = document.getElementById('ethereum-address');
 var proceedArrow = document.getElementById("proceed-arrow");
 
-window.addEventListener('load',()=>{
+window.addEventListener('load',(e)=>{
+    e.preventDefault()
     console.log('fefefefefe');
     proceedArrow.style.display='none';
     getAddress();

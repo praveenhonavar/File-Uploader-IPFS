@@ -8,7 +8,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     /* background-color:#323948; */
-    align-items: center;
+    /* align-items: center; */
 }
 
 #logo{
@@ -24,16 +24,55 @@ body{
 }
 
 #login-container{
-    margin-top: 11em;
-    width: 22em;
-    height: 22em;
+    margin-top: 9em;
+    width: 26em;
+    height: 26em;
     background-color: #171e2e;
     border-radius: 0.5em;
 }
 
 #content{
-    margin: 2em;
-    text-align: center;
+    /* margin: 2em; */
+    /* text-align: center; */
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1.7em;
+    padding-bottom: 1.7em;
+
+    color: #d9d9d9;
 }
+
+/* #item-header{
+    margin-bottom: 1em;
+}
+*/
+
+#item-subheader{
+    margin-bottom:1.5em;
+}
+ 
+#email-ip{
+    padding: 0.9em;
+    border-radius: 0.6em;
+    border: none;
+    width:27.5em;
+    background-color: #313742;
+    
+} 
+
+
+#password-ip{
+    padding: 0.9em;
+    border-radius: 0.6em;
+    border: none;
+    width:27.5em;
+    background-color: #313742;
+
+}
+
+label{
+    margin-bottom: 0.4em;
+}
+
 
 
