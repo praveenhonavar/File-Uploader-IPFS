@@ -261,6 +261,8 @@ event.preventDefault();
                 contract.methods.getHash().call().then(
                     (val)=>{
                         console.log('innn',val);
+
+                        export default val;
                     }
                 )
 

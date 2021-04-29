@@ -74,5 +74,14 @@ label{
     margin-bottom: 0.4em;
 }
 
+#login-button{
+    width:28em;
+    padding: 0.9em;
+    border-radius: 0.6em;
+    background-color: #00ffa4;
+    border: none;
+}
+
+
 
 
