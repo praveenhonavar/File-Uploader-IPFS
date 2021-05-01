@@ -3,6 +3,7 @@ pragma solidity >=0.4.21 <=0.8.3;
 
 contract HashStorage {
 
+
   uint fileId=0;
 
   string storedHash;
@@ -29,8 +30,11 @@ contract HashStorage {
 
   function getHash() public view returns (string memory) {
     return storedHash;
-
   }
+
+
+
+  
 
 
 }
