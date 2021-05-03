@@ -4,7 +4,7 @@
     background-color: #313742;
 }
 
-#container{
+#top-container{
     display: flex;
     flex-direction: row;
 }
@@ -12,11 +12,41 @@
 #side-nav-bar{
     height: 100vh;
     width: 15em;
+    margin-top: -10em;
     background-color: #171e2e;
 }
 
-#Introduction{
-   margin-left: 10em;
-padding-top: 30em;
+#nav-items{
+    background-color: #d9d9d9;
+    width: 30em;
+    height: 10em;
+}
 
+
+
+#Introduction{
+   margin-left: 5em;
+    margin-top: 1em;
+    color: #d9d9d9;
+    font-size: x-large;
+    font-weight: bolder;
+
+}
+
+#sub-intro{
+    color: #d9d9d9;
+    font-size: small;
+    margin-top: 0.5em;
+    margin-left: 9.5em;
+
+}
+
+#tool-boxs{
+
+}
+
+#tool-box{
+    height: 5em;
+    width: 30em;
+    background-color: #171e2e;
 }

@@ -258,11 +258,11 @@ event.preventDefault();
                     icon: "success",
                     button: "Done!",
                   });
-                contract.methods.getHash().call().then(
+                  
+                contract.methods.getFile(0,receiver).call().then(
                     (val)=>{
-                        console.log('innn',val);
+                        console.log('Dashboard hctib',val);
 
-                        export default val;
                     }
                 )
 
