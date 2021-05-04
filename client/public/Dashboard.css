@@ -12,14 +12,16 @@
 #side-nav-bar{
     height: 100vh;
     width: 15em;
-    margin-top: -10em;
+    /* margin-top: -10em; */
     background-color: #171e2e;
+
 }
 
 #nav-items{
     background-color: #d9d9d9;
     width: 30em;
     height: 10em;
+    z-index: 99;
 }
 
 
@@ -40,7 +42,7 @@
     margin-left: 9.5em;
 
 }
-
+/* 
 #tool-boxs{
 
 }
@@ -49,4 +51,4 @@
     height: 5em;
     width: 30em;
     background-color: #171e2e;
-}
+} */

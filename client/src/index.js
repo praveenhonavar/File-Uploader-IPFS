@@ -64,6 +64,7 @@ console.log(receiverAddress);
 var file;
 var contract;
 var account;
+var fileId;
 
 var bufferedFile;
 
@@ -259,13 +260,17 @@ event.preventDefault();
                     button: "Done!",
                   });
                   
-                contract.methods.getFile(0,receiver).call().then(
+                  contract.methods.getFileId(receiver).call().then(
                     (val)=>{
-                        console.log('Dashboard hctib',val);
-
+                      fileId=val;
+                      console.log('board dash hctib',fileId);
+                      contract.methods.getFile(fileId-1,receiver).call().then((res)=>{
+                      console.log(res);
+                      })
                     }
-                )
-
+                  )
+              
+                  
             }
         )
     })

@@ -59,17 +59,19 @@ var firebaseConfig = {
 }
 // }
 
-ethAdd.addEventListener('change',()=>{
-    dispAddress();
+ethAdd.addEventListener('click',(e)=>{
+    e.preventDefault();
+    dispAddress(e);
 })
 
-function dispAddress() {
+function dispAddress(event) {
+    event.preventDefault();
     // var ethAdd = document.getElementById('ethereum-address');
     var displayedAddress = ethAdd.options[ethAdd.selectedIndex];
     var actualAddress = displayedAddress.text;
     console.log(actualAddress);
     
-    storeAddress(actualAddress);
+    storeAddress(actualAddress,event);
 
     // localStorage.setItem("ethAdd",actualAddress);
 
@@ -84,7 +86,8 @@ function dispAddress() {
 
     // export default ponu;
 
-function  storeAddress(selectedAddress) {
+function  storeAddress(selectedAddress,event) {
+    event.preventDefault();
     var storeAddress = firebase.database();
     console.log(storeAddress);
 
