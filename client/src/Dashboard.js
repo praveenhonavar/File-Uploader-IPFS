@@ -3627,7 +3627,17 @@ window.addEventListener("load",async () => {
       }
     )
 
-   
+    console.log('thiss',contract.events.allEvents());
+
+      
+    contract.getPastEvents('ShareFile',{
+      fromBlock:0,
+      toBlock:"latest"
+    }).then((val)=>{
+      console.log(val[0]);
+      console.log("rereeeeeeeeeee",val[0].returnValues);
+
+    })
     
   }
 
