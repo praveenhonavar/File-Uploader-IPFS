@@ -3586,8 +3586,13 @@ var HashStorageContract ={
 }
 
 
+
+
 window.addEventListener("load",async () => {
   var fileId=-1;
+
+  var sharedFiles = document.getElementById("shared-files");
+
 
   console.log('iwjifjiwjfjefje');
   if(typeof web3 !== 'undefined'){
@@ -3618,26 +3623,37 @@ window.addEventListener("load",async () => {
 
     contract.methods.getFileId(account[0]).call().then(
       (val)=>{
+        var ipfsSite = 'http://ipfs.io/ipfs/';
         fileId=val;
         console.log('board dash hctib',fileId);
 
-        contract.methods.getFile(fileId-1,account[0]).call().then((res)=>{
-          console.log(res);
-        })
+        for (let index = 0; index < fileId; index++) {
+          // const element = array[index];
+          contract.methods.getFile(index,account[0]).call().then((res)=>{
+            console.log("hctib",res);
+
+            sharedFiles.innerHTML+= `<h4>${res[1]} &nbsp&nbsp ${res[2]}</h4> 
+            <a href=${ipfsSite+res[0]}><button>Download</button></a>`;
+
+          })
+
+          
+        }
+       
       }
     )
 
-    console.log('thiss',contract.events.allEvents());
+    // console.log('thiss',contract.events.allEvents());
 
       
-    contract.getPastEvents('ShareFile',{
-      fromBlock:0,
-      toBlock:"latest"
-    }).then((val)=>{
-      console.log(val[0]);
-      console.log("rereeeeeeeeeee",val[0].returnValues);
+    // contract.getPastEvents('ShareFile',{
+    //   fromBlock:0,
+    //   toBlock:"latest"
+    // }).then((val)=>{
+    //   console.log(val[0]);
+    //   console.log("rereeeeeeeeeee",val[0].returnValues);
 
-    })
+    // })
     
   }
 
