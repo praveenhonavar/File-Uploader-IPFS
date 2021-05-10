@@ -3632,8 +3632,38 @@ window.addEventListener("load",async () => {
           contract.methods.getFile(index,account[0]).call().then((res)=>{
             console.log("hctib",res);
 
-            sharedFiles.innerHTML+= `<h4>${res[1]} &nbsp&nbsp ${res[2]}</h4> 
-            <a href=${ipfsSite+res[0]}><button>Download</button></a>`;
+            // sharedFiles.innerHTML+= `<h4>${res[1]} &nbsp&nbsp ${res[2]}</h4> 
+            // <a href=${ipfsSite+res[0]}><button>Download</button></a>`;
+
+
+          // sharedFiles.innerHTML+=
+          // `<div style=width:20em;height:5em;margin:20px;background-color:#0d1320>
+
+          // <h6 style=color:#d9d9d9>${res[1]} &nbsp&nbsp ${res[2]}</h6>
+            
+          // <a href=${ipfsSite+res[0]}><button style=background-color:#00ffa4>Download</button></a>
+          
+          // </div>`
+
+          sharedFiles.innerHTML+=
+         `<div class="courses-container">
+          <div class="course">
+              <div class="course-preview">
+                  <h6>Sender Details</h6>
+                  <h3>${res[3]}</h3>
+
+              </div>
+              <div class="course-info">
+                  
+                  <h6>File Name</h6>
+                  <h2>${res[1]}</h2>
+                  <a href=${ipfsSite+res[0]}>
+                  <button class="btn">Download</button>
+                  </a>
+              </div>
+          </div>
+      </div>`
+
 
           })
 

@@ -7,7 +7,12 @@
 
 #dashboard-container{
     position: absolute;
-    margin-left:20em;
+    margin-left:120em;
+    color: #d9d9d9;
+}
+
+#Introduction{
+    margin: 20em;
 }
 
 #side-nav-bar{
@@ -26,28 +31,104 @@
     margin-top: 10em;
     background-color: #171e2e;
     
+}
+
+#cards-container{
+    position: absolute;
+    margin-top: 20em;
+}
+
+#cards{
     
-
+    margin:40px;
+    width: 70em;
+    height: 6em;
+    background-color: #171e2e;
+    border-radius: 10px;
 }
 
-/* 
 
-#Introduction{
-   margin-left: 5em;
-    margin-top: 1em;
-    color: #d9d9d9;
-    font-size: x-large;
-    font-weight: bolder;
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
+* {
+	box-sizing: border-box;
 }
 
-#sub-intro{
-    color: #d9d9d9;
-    font-size: small;
-    margin-top: 0.5em;
-    margin-left: 9.5em;
 
+/* body {
+	background-image: linear-gradient(45deg, #7175da, #9790F2);
+	font-family: 'Muli', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
 } */
-/* 
 
+.courses-container {
+}
+
+.course {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	max-width: 100%;
+	margin: 20px;
+	overflow: hidden;
+	width: 700px;
+}
+
+.course h6 {
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.course h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+}
+
+.course-preview {
+	background-color: #0d1320;
+	color: #fff;
+	padding: 30px;
+	max-width: 250px;
+}
+
+.course-preview a {
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	opacity: 0.6;
+	margin-top: 30px;
+	text-decoration: none;
+}
+
+.course-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+    background-color:#171e2e;
+}
+
+
+
+.btn {
+	background-color: #00ffa4;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	letter-spacing: 1px;
+    cursor: pointer;
+}
 
