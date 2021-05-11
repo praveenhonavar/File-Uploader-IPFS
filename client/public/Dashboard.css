@@ -1,83 +1,78 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: #313742;
+	font-family: "Montserrat", sans-serif;
+
 }
 
 
-#dashboard-container{
-    position: absolute;
-    margin-left:120em;
-    color: #d9d9d9;
-}
 
-#Introduction{
-    margin: 20em;
-}
-
-#side-nav-bar{
-    background-color: #171e2e;
-    width: 20%;
-    height: 120vh;
-    position: fixed;
-    /* z-index: 999; */
-    margin-top: -6em;
-
+#nav-bar{
+	background-color: #0d1320;
+	height: 10vh;
+	width: 100%;
+	/* position:fixed; */
 }
 
 #nav-items{
-    color: #d9d9d9;
-    position: absolute;
-    margin-top: 10em;
-    background-color: #171e2e;
-    
-}
-
-#cards-container{
-    position: absolute;
-    margin-top: 20em;
-}
-
-#cards{
-    
-    margin:40px;
-    width: 70em;
-    height: 6em;
-    background-color: #171e2e;
-    border-radius: 10px;
-}
-
-
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-
-* {
-	box-sizing: border-box;
-}
-
-
-/* body {
-	background-image: linear-gradient(45deg, #7175da, #9790F2);
-	font-family: 'Muli', sans-serif;
+	color: #d9d9d9;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	min-height: 100vh;
-	margin: 0;
-} */
+	justify-content: space-around;
+	list-style: none;
+	padding-top: 20px;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: large;
+}
+
+#dashboard{
+	color:#00ffa4;	
+}
+
+#nav-items:hover{
+	color: #fff;
+}
+
+#dashboard-container{
+	width: 50%;
+	height: 30vh;
+	/* background-color: aqua; */
+	/* position: absolute; */
+	margin-left: 15em;
+	margin-top: 4em;
+	color: #d9d9d9;
+	font-size: x-large;
+	font-weight: 900;
+}
+
+#Introduction{
+	padding-bottom :20px;
+
+}
+
+#sub-intro{
+}
+
+
+
+body{
+	height: 150vh;
+	background-color: #313742;
+}
 
 .courses-container {
+	margin-left: 13em;
 }
 
 .course {
-	background-color: #fff;
+	/* background-color: #fff; */
 	border-radius: 10px;
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 	display: flex;
-	max-width: 100%;
-	margin: 20px;
+	/* max-width: 100%; */
+	/* margin: 20px; */
 	overflow: hidden;
-	width: 700px;
+	width: 900px;
 }
 
 .course h6 {
@@ -114,7 +109,6 @@
 	width: 100%;
     background-color:#171e2e;
 }
-
 
 
 .btn {
