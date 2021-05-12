@@ -21,9 +21,15 @@
 
     <nav id="nav-bar">
         <ul id="nav-items">
+
             <li id="home">Home</li>
+
             <li id="dashboard">Dashboard</li>
-            <li id="settings">Start Sharing</li>
+
+            <a href="http://localhost:3000/index.html">
+                <li id="share">Start Sharing</li>
+            </a>
+
             <li id="account">Your Account</li>
            
         </ul>
@@ -37,19 +43,23 @@
                 <div id="sub-intro">Explore a Secure way of sharing Health Records</div>
         </section>
 
-     
+        <!-- <h3 id='dash-head'>Files Shared with You</h3> -->
+
          <div id="shared-files">
             <div class="courses-container">
                 <div class="course">
                     <div class="course-preview">
-                        <h6>Shared Details</h6>
-                        <h2>Date & Time</h2>
+                        <h6>Details</h6>
+                        <h4>24/06/2021</h4>
 
                     </div>
+
                     <div class="course-info">
                         
                         <h6>File Info</h6>
-                        <h2>Your File</h2>
+                        <h2 id="file-info">Your File</h2>
+                        <h6>Sender Details</h6>
+                        <h4>Doctor Kutrapali</h4>
                         <button class="btn">Download</button>
                     </div>
                 </div>

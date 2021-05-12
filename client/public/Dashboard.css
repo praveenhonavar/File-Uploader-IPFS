@@ -29,9 +29,22 @@
 	color:#00ffa4;	
 }
 
-#nav-items:hover{
-	color: #fff;
+ #home{
+	color:#d9d9d9;
 }
+
+#share{
+	color:#d9d9d9;
+	
+}
+
+a{
+	text-decoration: none;
+	
+}
+
+
+
 
 #dashboard-container{
 	width: 50%;
@@ -39,7 +52,7 @@
 	/* background-color: aqua; */
 	/* position: absolute; */
 	margin-left: 15em;
-	margin-top: 4em;
+	margin-top: 3em;
 	color: #d9d9d9;
 	font-size: x-large;
 	font-weight: 900;
@@ -53,7 +66,12 @@
 #sub-intro{
 }
 
-
+#dash-head{
+	text-align: center;
+	margin-bottom: 2em;
+	margin-top: -4em;
+	
+}
 
 body{
 	height: 150vh;
@@ -73,6 +91,7 @@ body{
 	/* margin: 20px; */
 	overflow: hidden;
 	width: 900px;
+	margin-bottom: 2em;
 }
 
 .course h6 {
@@ -101,6 +120,7 @@ body{
 	opacity: 0.6;
 	margin-top: 30px;
 	text-decoration: none;
+	width: 30%;
 }
 
 .course-info {
@@ -109,6 +129,11 @@ body{
 	width: 100%;
     background-color:#171e2e;
 }
+
+#file-info{
+	color:#d9d9d9;
+}
+
 
 
 .btn {

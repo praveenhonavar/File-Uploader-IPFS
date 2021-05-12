@@ -12,6 +12,8 @@ struct SharedData{
     string fileName;
     address sender;
     address receiver;
+    string time;
+    
     
 }
 
@@ -22,27 +24,28 @@ mapping(address => mapping(uint => SharedData))  SharedDataMapping;
     string ipfsValue,
     string fileName,
     address sender,
-    address receiver
+    address receiver,
+    string time
   );
   
   mapping(address=>uint) fileKey;
   
-  function uploadHash(string memory storedHash,string memory fileName,address sender,address receiver) public {
+  function uploadHash(string memory storedHash,string memory fileName,address sender,address receiver,string memory time) public {
      
     fileId=fileKey[receiver]; 
    
-    SharedDataMapping[receiver][fileId] = SharedData(storedHash,fileName,msg.sender,receiver);
+    SharedDataMapping[receiver][fileId] = SharedData(storedHash,fileName,msg.sender,receiver,time);
     
     fileKey[receiver]+=1;
     
-    emit ShareFile(storedHash,fileName,sender,receiver);
+    emit ShareFile(storedHash,fileName,sender,receiver,time);
     
   }
   
-  function getFile(uint fId,address receiver) public view returns(string memory,string memory,address,address){
+  function getFile(uint fId,address receiver) public view returns(string memory,string memory,address,address,string memory){
       
       return (SharedDataMapping[receiver][fId].storedHash,SharedDataMapping[receiver][fId].fileName,
-      SharedDataMapping[receiver][fId].sender,SharedDataMapping[receiver][fId].receiver);
+      SharedDataMapping[receiver][fId].sender,SharedDataMapping[receiver][fId].receiver,SharedDataMapping[receiver][fId].time);
   }
   
   function getFileId(address receiver) public view returns(uint){

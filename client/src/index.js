@@ -99,6 +99,9 @@ console.log(fileName);
 
 window.addEventListener("load", async () => {
 
+  var d = new Date().toLocaleString();
+  console.log('time',d);
+
     // console.log('wlpflwpflwfwpfw',firebase);
     fileAddedIcon.style.display='none';
     loader.style.display='none';
@@ -160,7 +163,6 @@ window.addEventListener("load", async () => {
   //       var ass = info[k];
   //       console.log('storedAddress',ass);
   //   })
-
   // }
 
 
@@ -199,6 +201,9 @@ chooseButton.addEventListener('change',(event)=>{
 
 uploadButton.addEventListener('click',(event)=>{
 event.preventDefault();
+
+var d = new Date().toLocaleString();
+console.log('time',d);
 
     // var fn = fileName.value;
 
@@ -239,7 +244,7 @@ event.preventDefault();
         console.log("Sexcess");
         console.log(res[0].hash);
 
-        contract.methods.uploadHash(res[0].hash,fileName,account[0],receiver).send({from:account[0]}).then(
+        contract.methods.uploadHash(res[0].hash,fileName,account[0],receiver,d).send({from:account[0]}).then(
             (data) =>{
                 console.log(data);
                 console.log('added');

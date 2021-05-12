@@ -3616,7 +3616,9 @@ window.addEventListener("load",async () => {
       );
 
     console.log('contract hctib',contract);
-    
+
+   
+    // console.log('eedar',web3.eth.getTransactionReceipt());
     // const fk = web3.eth.
 
     console.log(account[0]);
