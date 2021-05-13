@@ -113,6 +113,15 @@ body{
 	max-width: 250px;
 }
 
+
+.course-preview h6{
+	color:rgb(141, 138, 138);
+}
+
+.course-preview h4{
+	color: #d9d9d9;
+}
+
 .course-preview a {
 	color: #fff;
 	display: inline-block;
@@ -130,18 +139,31 @@ body{
     background-color:#171e2e;
 }
 
-#file-info{
+.course-info h6{
+	color: rgb(141, 138, 138);
+	
+}
+
+#sender{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.course-info h2{
 	color:#d9d9d9;
 }
 
-
+.course-info h4{
+	color:rgb(141, 138, 138);
+}
 
 .btn {
 	background-color: #00ffa4;
 	border: 0;
 	border-radius: 50px;
 	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-	color: #fff;
+	color:black;
+	font-weight: 900;
 	font-size: 16px;
 	padding: 12px 25px;
 	position: absolute;
